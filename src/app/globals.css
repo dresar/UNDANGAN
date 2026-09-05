@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FAF7F2;
+    --foreground: #2B2621;
+    --primary: #D4AF37;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F5EFE6;
+    --secondary-foreground: #332D27;
+    --accent: #996515;
+    --accent-foreground: #FFFFFF;
+    --muted: #EFEAE1;
+    --muted-foreground: #786F66;
+    --surface: #FFFFFF;
+    --surface-border: #E6DCB8;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* SLEEK CUSTOM ULTRA-THIN SCROLLBAR */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.7);
+}
+
+/* Hide scrollbar for clean device screens when needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom device mockup reflections & shadows */
+.android-device-shadow {
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 25px 60px -15px rgba(0, 0, 0, 0.9),
+    0 0 40px -10px rgba(16, 185, 129, 0.15);
+}
+
+.iphone-device-shadow {
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 30px 70px -15px rgba(0, 0, 0, 0.95);
+}
